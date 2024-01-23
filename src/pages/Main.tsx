@@ -36,12 +36,16 @@ const [fourPerks, setFourPerks] = useState([])
    
         <h1> Dead by Daylight Perkroulette</h1>
         <div>
-            {/* <img src = "https://dennisreep.nl/dbd/images/SurvivorPerks/64px-IconPerks_windowsOfOpportunity.webp" ></img> */}
-            {/* <img src = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/IconPerks_aceInTheHole.png/revision/latest/scale-to-width-down/100?cb=20161208214510" alt="Description"/> */}
+            {/* <img src = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f7/IconPerks_adrenaline.png" ></img>
+            <img src = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/IconPerks_aceInTheHole.png" alt="Description"/> */}
            
             <div>
+                
                 {fourPerks.map((perk:any) => (
+                    <div className = "perks">
                     <p key={perk.id}>{perk.name} </p>
+                    <img src = {perk.img_url}/>
+                   </div>
                 
                 ))}
             </div>
