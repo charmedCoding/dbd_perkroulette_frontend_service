@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Define your Docker container name
+CONTAINER_NAME="your_container_name"
+
+# Remove Docker container if it exists
+docker container rm -f $CONTAINER_NAME || true
+
+# Change into the directory where your project is located
+cd /path/to/your/project
+
+# Git pull to get the latest code
+git pull origin main  # Replace "main" with your branch name
+
+# Docker build
+docker build -t $CONTAINER_NAME:latest .
+
+# Docker run
+docker run docker run --name $CONTAINER_NAME_FRONTEND -v cache-volume:/var/cache/nginx -v varrun-directory:/var/run -v cache-volume:/tmp -p 80:8080 -d $CONTAINER_NAME_FRONTEND:latest
+docker run docker run --name dbd_frontend -v cache-volume:/var/cache/nginx -v varrun-directory:/var/run -v cache-volume:/tmp -p 80:8080 -d dbd_perkroulette_frontend:latest

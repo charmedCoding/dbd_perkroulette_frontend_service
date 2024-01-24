@@ -46,7 +46,7 @@ const [fourPerks, setFourPerks] = useState([])
                     <p key={perk.id}>{perk.name} </p>
                     <img src = {perk.img_url}/>
                    </div>
-                
+              
                 ))}
             </div>
             <Button onClick={newPerksOnClick}> Randomize Perks </Button>
