@@ -1,7 +1,10 @@
 
 .App {
   /* The image used */
-  background-image: url("https://wallpapergod.com/images/hd/dead-by-daylight-4851X2653-wallpaper-2tph6mbzrsgxlqla.jpeg");
+  /* background-image: url("https://wallpapergod.com/images/hd/dead-by-daylight-4851X2653-wallpaper-2tph6mbzrsgxlqla.jpeg"); */
+  background-image: url("https://i.redd.it/u5gsn5x658y71.png");
+  /* background-image:url("https://i.ytimg.com/vi/BzWOl4YmqgY/maxresdefault.jpg"); */
+  /* background-image:url("https://i.pinimg.com/originals/31/cf/c7/31cfc75aabf3960134f9cb53894053cb.jpg"); */
 
   /* Full height */
   height: 100vh;
@@ -19,11 +22,13 @@ body {
   
 }
 .perkroulette{
-  background-color: black;
-  opacity: 0.8;
   display: flex;
-      flex-direction: column;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center; /* Vertical alignment */
+  flex-direction: column;
+ 
   padding: 4vh;
+ 
 }
 
 .perks{
@@ -32,29 +37,24 @@ body {
   margin: 10vh; 
 }
 
-
 .perk-button {
-  justify-content: center;
-  width: 150px;
-  height: 150px;
-  background-color: black; 
+  position: relative;
+  display: inline-block;
+  border: none;
+  width: 20vh;
+  height: 20vh;
+  background-color: rgb(59,15,98,1)!important; 
   padding: 3vh;
   color: white; 
-  border: 3vh; 
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 } 
+.center-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .perk-button:hover {
   background-color: darkblue; /* Hintergrundfarbe bei Hover anpassen */
-}
-
-.generator-button{
-  background-color: #7A0404;
-}
-.main{ 
-  
-  display: flex;
-  justify-content: center; /* Horizontal alignment */
-  align-items: center; /* Vertical alignment */
-  flex-direction: column;
 }
