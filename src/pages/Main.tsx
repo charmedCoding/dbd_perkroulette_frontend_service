@@ -57,11 +57,7 @@ setPerkInfo(item.description)
   
 
     return(
-    <>
-   
-    
-        <div className = "main"> 
-        
+
             <div className = "perkroulette">
             <h1> Dead by Daylight Perkroulette</h1>
                 <div className = "fourperks">
@@ -82,10 +78,7 @@ setPerkInfo(item.description)
                 </div>
                 <Button variant="contained" className= "generator-button" style={{backgroundColor: 'orange', color: 'white'}} onClick={newPerksOnClick}> Randomize Perks </Button>
             </div>
-            
-        </div>
-       
-        </>
+      
     )
 }
 

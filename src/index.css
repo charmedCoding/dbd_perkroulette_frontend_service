@@ -7,7 +7,7 @@
   /* background-image:url("https://i.pinimg.com/originals/31/cf/c7/31cfc75aabf3960134f9cb53894053cb.jpg"); */
 
   /* Full height */
-  height: 100vh;
+  height: 100vhgit;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -19,15 +19,19 @@ body {
  
   color: white;
   text-align: white;
+  margin: 0;
   
 }
 .perkroulette{
-  display: flex;
+  width: 100%;
+  height: 50%;
+
   justify-content: center; /* Horizontal alignment */
   align-items: center; /* Vertical alignment */
-  flex-direction: column;
- 
-  padding: 4vh;
+  /* flex-direction: column; */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding: 6vh;
  
 }
 
