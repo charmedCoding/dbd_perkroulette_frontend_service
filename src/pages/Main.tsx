@@ -7,36 +7,36 @@ import {Button} from "@mui/material"
 import Tooltip from '@mui/material/Tooltip';
 
 const MainPage: React.FunctionComponent = () => {
-    const meg_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/12/SurvivorMeg.png";
-    const locker_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/Dbd-survivor-closet.png"
-    const hatch_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/IconHelpLoading_hatch.png"
+    // const meg_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/12/SurvivorMeg.png";
+    // const locker_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/Dbd-survivor-closet.png"
+    // const hatch_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fc/IconHelpLoading_hatch.png"
     const survivor_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b3/IconHelpLoading_survivor.png"
-    const totem_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/IconHelpLoading_totem.png"
-    const perk_base_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/74/IconHelp_perks.png"
+    // const totem_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e9/IconHelpLoading_totem.png"
+    // const perk_base_url = "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/74/IconHelp_perks.png"
     const perkStart: any = {name: "", description: "", character:"", img_url: survivor_url}
 const [fourPerks, setFourPerks] = useState([perkStart, perkStart, perkStart,perkStart])
-const [perkInfo, setPerkInfo] = useState([])
-const [name, setName] = useState([])
+// const [perkInfo, setPerkInfo] = useState([])
+// const [name, setName] = useState([])
 const [description, setDescription] = useState([])
-const [character, setCharacter] = useState([])
+// const [character, setCharacter] = useState([])
 
 
 
     const perkQuery = usePerks()
     const perkList = perkQuery.data
 
-    const setPerk = (item: any) => {
-        setName(item.name);
-        setDescription(item.description)
-        setCharacter(item.character)
-    }
+    // const setPerk = (item: any) => {
+    //     setName(item.name);
+    //     setDescription(item.description)
+    //     setCharacter(item.character)
+    // }
 
-    const givePerkDescription = (item:any) => {
-setPerkInfo(item.description)
-    }
+//     const givePerkDescription = (item:any) => {
+// setPerkInfo(item.description)
+//     }
 
     const newPerksOnClick= () => {
- setPerkInfo([]);
+//  setPerkInfo([]);
         if(perkList){
         setFourPerks(getRandomElements(perkList,4))
     }
@@ -65,8 +65,8 @@ setPerkInfo(item.description)
                     <div className = "perks"key={perk.id}>
                     <p >{perk.name} </p>
                     <>
-                    <Tooltip title={description} arrow>
-                    <Button className = "perk-button" onClick = {() => setPerk(perk)}> 
+                    <Tooltip title={perk.description} arrow>
+                    <Button className = "perk-button" > 
                     <img src={perk.img_url} className="center-image" />
                     </Button>
                     </Tooltip>
